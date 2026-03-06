@@ -1,11 +1,11 @@
 import { z } from "zod";
 
 const expenseSchema = z.object({
-    category: z.string().min(1),
+    category: z.enum(["Housing", "Food", "Transportation", "Entertainment", "Other", "Lifestyle"]),
     amount: z.number().positive(),
     date: z.string().refine(d => !isNaN(Date.parse(d)), "Invalid date"),
     description: z.string().min(1),
-    recurrence: z.enum(["daily", "weekly", "monthly"]).optional(),
+    recurrence: z.enum(["none", "weekly", "monthly"]).optional(),
 });
 
 const budgetSchema = z.object({
