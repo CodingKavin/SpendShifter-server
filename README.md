@@ -21,11 +21,13 @@ Built with **Node.js**, **Express**, **PostgreSQL**, and integrates with **Supab
 - **Supabase** or **Resend** for email services
 - **JWT** for authentication
 
-**Project Structure**
+## Project Structure
 
+```text
 ├── routes/ #expense and budgets routes
 ├── utils/ # validation, helpers
 └── server.js # Main server file
+```
 
 ## Getting Started
 
